@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Demo</title>
+		<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style type="text/css">
+       
+		</style>
+	</head>
+	<body>
+
+		<div class="rbox">
+			<form id="registrationForm" action="insert.php" method="POST">
+				<table border="0" cellpadding="4px" cellspacing="4px" width="250">
+					<thead>
+						<tr>
+							<th> Registration </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<label for="fname">Fullname:</label>
+								<input type="text" name="sname" id="sname" placeholder="Enter Fullname" required>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<label for="email">email:</label>
+								<input type="text" name="email" id="email" placeholder="Enter Email" required>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="studentid">Student_ID:</label>
+								<input type="text" name="Student_ID" id="student_ID" placeholder="Enter Student_ID" required>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="sname">username:</label>
+								<input type="text" name="sname" id="sname" placeholder="Enter Surname" required>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="paswd">Password:</label>
+								<input type="Password" name="paswd" id="paswd" placeholder="Enter Password" required>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="cpaswd">Confirm Password:</label>
+								<input type="Password" name="cpaswd" id="cpaswd" placeholder="Confirm Password" required>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p id="msg"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button type="submit" id="btnSub">Submit</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			$("#cpaswd").keyup(function(e){
+				if($("#paswd").val() === $(this).val())
+				{
+					//$("#msg").html("<img src='img/success.png' width='16px' /> Passwords match!!");
+					$(this, "#paswd").css("border", "1px solid #0d0");
+				}
+				else
+				{
+					//$("#msg").html("Passwords do not match!!");
+					$(this, "#paswd").css("border", "1px solid #d00");
+				}
+			});
+		});
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
